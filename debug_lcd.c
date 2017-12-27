@@ -303,11 +303,11 @@ void Main(void)
 	}
     else
     {
-	   xiezfc(1,1,"No device!      ");
+	   xiezfc(1,1,"Testing....     ");
 	   xiezfc(2,1,"                ");
     }       	   
 
-    delay(800);
+    delay(300);
 
   }
 }

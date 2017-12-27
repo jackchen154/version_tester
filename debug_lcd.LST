@@ -1,4 +1,4 @@
-C51 COMPILER V9.00   DEBUG_LCD                                                             12/26/2017 10:15:55 PAGE 1   
+C51 COMPILER V9.00   DEBUG_LCD                                                             12/27/2017 10:25:34 PAGE 1   
 
 
 C51 COMPILER V9.00, COMPILATION OF MODULE DEBUG_LCD
@@ -62,7 +62,7 @@ line level    source
   53   2          {
   54   3            if(crc&1)
   55   3            {
-C51 COMPILER V9.00   DEBUG_LCD                                                             12/26/2017 10:15:55 PAGE 2   
+C51 COMPILER V9.00   DEBUG_LCD                                                             12/27/2017 10:25:34 PAGE 2   
 
   56   4              crc>>=1;
   57   4              crc ^= 0XA001; 
@@ -126,7 +126,7 @@ line level    source
  115   1         disbuf[7]=' ';
  116   1         disbuf[8]=((*(real_data+1)&0x00ff)>>4)+48;
  117   1         disbuf[9]=(*(real_data+1)&0x000f)+48;
-C51 COMPILER V9.00   DEBUG_LCD                                                             12/26/2017 10:15:55 PAGE 3   
+C51 COMPILER V9.00   DEBUG_LCD                                                             12/27/2017 10:25:34 PAGE 3   
 
  118   1         disbuf[10]='-';
  119   1         disbuf[11]=(*(real_data+2)>>12)+48;
@@ -190,7 +190,7 @@ line level    source
  177   2          send_data(0x05,0x78,3);
  178   2          delay(30);
  179   2          if(real_data[0]!=0&&real_data[1]!=0&&real_data[2]!=0)
-C51 COMPILER V9.00   DEBUG_LCD                                                             12/26/2017 10:15:55 PAGE 4   
+C51 COMPILER V9.00   DEBUG_LCD                                                             12/27/2017 10:25:34 PAGE 4   
 
  180   2              {
  181   3                device=1;
@@ -254,7 +254,7 @@ line level    source
  239   2          if(real_data[0]!=0&&real_data[1]!=0&&real_data[2]!=0)       
  240   2              {
  241   3                device=6;
-C51 COMPILER V9.00   DEBUG_LCD                                                             12/26/2017 10:15:55 PAGE 5   
+C51 COMPILER V9.00   DEBUG_LCD                                                             12/27/2017 10:25:34 PAGE 5   
 
  242   3                disply_data[0]=real_data[0];
  243   3                disply_data[1]=real_data[1];
@@ -318,15 +318,15 @@ line level    source
  301   3                disply_data[1]=0;
  302   3                disply_data[2]=0;
  303   3              }
-C51 COMPILER V9.00   DEBUG_LCD                                                             12/26/2017 10:15:55 PAGE 6   
+C51 COMPILER V9.00   DEBUG_LCD                                                             12/27/2017 10:25:34 PAGE 6   
 
  304   2          else
  305   2          {
- 306   3                 xiezfc(1,1,"No device!      ");
+ 306   3                 xiezfc(1,1,"Testing....     ");
  307   3                 xiezfc(2,1,"                ");
  308   3          }              
  309   2      
- 310   2          delay(800);
+ 310   2          delay(300);
  311   2      
  312   2        }
  313   1      }
@@ -382,7 +382,7 @@ line level    source
  363   5                 crc_result = get_crc(&data_buf[3],data_buf[5]+3);//数据帧计算CRC
  364   5                 ck_crc = data_buf[ (data_buf[5]+7)]<<8 | data_buf[ (data_buf[5]+6) ];//低高字节CRC转换为整数
  365   5                     if(crc_result==ck_crc)//CRC校验比对
-C51 COMPILER V9.00   DEBUG_LCD                                                             12/26/2017 10:15:55 PAGE 7   
+C51 COMPILER V9.00   DEBUG_LCD                                                             12/27/2017 10:25:34 PAGE 7   
 
  366   5                     {  
  367   6                       for(i=0;i<(data_buf[5]/2);i++)//计算数据对个数
