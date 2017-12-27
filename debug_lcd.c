@@ -256,6 +256,22 @@ void Main(void)
 	  disply_data[2]=real_data[2];
 	}
 	clear_real_data();
+
+    //主控板
+	TH1 = 0xFA;	//波特率切换为115200	
+	TL1 = TH1;	
+    send_data(0x81,0x78,3);
+    delay(30);
+    if(real_data[0]!=0&&real_data[1]!=0&&real_data[2]!=0)	
+	{
+	  device=8;
+	  disply_data[0]=real_data[0];
+	  disply_data[1]=real_data[1];
+	  disply_data[2]=real_data[2];
+	}
+	TH1 = 0xee;	//波特率切换回38400
+	TL1 = TH1;
+	clear_real_data();
 	
 	if(device!=0)
 	{
@@ -295,6 +311,11 @@ void Main(void)
 	    xiezfc(1,1,"Turn board   [2]");
 		lcd_display(disply_data);
 	  }
+	  if(device==8)
+	  {
+	    xiezfc(1,1,"Main board      ");
+		lcd_display(disply_data);
+	  }
 
 	  device=0;	
 	  disply_data[0]=0;
@@ -308,7 +329,6 @@ void Main(void)
     }       	   
 
     delay(300);
-
   }
 }
 	

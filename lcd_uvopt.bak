@@ -172,10 +172,10 @@
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>0</ColumnNumber>
+      <ColumnNumber>11</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>1</TopLine>
-      <CurrentLine>10</CurrentLine>
+      <TopLine>289</TopLine>
+      <CurrentLine>310</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>.\debug_lcd.c</PathWithFileName>
       <FilenameWithoutPath>debug_lcd.c</FilenameWithoutPath>
@@ -1555,9 +1555,9 @@
       <Documents>
         <Doc>
           <Name>.\debug_lcd.c</Name>
-          <ColumnNumber>0</ColumnNumber>
-          <TopLine>1</TopLine>
-          <CurrentLine>10</CurrentLine>
+          <ColumnNumber>11</ColumnNumber>
+          <TopLine>289</TopLine>
+          <CurrentLine>310</CurrentLine>
         </Doc>
         <Doc>
           <Name>1602.H</Name>
